@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.first-block{
+    width: 500px;
+    height: 500px;
+    background-image: url('first.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.second-block{
+    width: 500px;
+    height: 500px;
+    background-image: url('second.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
+.first-block:hover{
+    padding: 50px;
+    background-image: none;
+    transition: all 5s;
+    border-radius: 10%;
+    box-shadow: 1px 3px 8px 13px rgba(0, 0, 0, 0.2);
+}
+.second-block:hover{
+    opacity: 1;
+    transition: all 5s;
+    border-radius: 10%;
+    box-shadow: 1px 3px 8px 13px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+}
+.third-block{
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    border-radius: 10%;
+}
+.third-block::before{
+    content: 'HELLO';
+    color:blueviolet;
+    position: relative;
+    font-family: fantasy;
+    font-size: 50px;
+    font-weight: 600;
+    left: 100px;
+    top: 115px;
+}
+.third-block::after{
+    content: 'WORLD';
+    position:relative;
+    color:aqua;
+    font-family: fantasy;
+    font-size: 50px;
+    font-weight: 600;
+    left: -30px;
+    top: 115px;
+    opacity:0;
+}
+.third-block:hover::before{
+    opacity: 0;   
+    transition: 3s;
+}
+.third-block:hover{
+    transform: rotate(360deg);
+    background-color: blueviolet;
+    transition: all 5s;
+    border-radius: 50%;
+}
+.third-block:hover::after{
+   opacity: 1;
+   transition: 5s;
+}
